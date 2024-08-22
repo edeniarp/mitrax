@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Développeur</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header avec vidéo YouTube en arrière-plan -->
+    <!-- Vidéo de fond en plein écran -->
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/it-jSj7hA_Y?autoplay=1&mute=1&loop=1&playlist=it-jSj7hA_Y" frameborder="0" allow="autoplay; fullscreen"></iframe>
+    </div>
+
+    <!-- Contenu principal -->
     <header id="main-header">
-        <div class="profile-logo">
-            <img src="https://cdn.discordapp.com/attachments/1162722175447482388/1260371586717057064/mitraxlogo.jpg?ex=66c86d42&is=66c71bc2&hm=c4670fefd7bca91058328f9af1b3d8f16e3bca3bb2c06875c77a384869b6535b" alt="Profil">
-        </div>
         <div class="overlay">
             <h1 class="glow-text">Bienvenue sur mon Portfolio</h1>
-        </div>
-        <div class="video-background">
-            <iframe src="https://www.youtube.com/embed/it-jSj7hA_Y?autoplay=1&mute=1&loop=1&playlist=it-jSj7hA_Y" frameborder="0" allow="autoplay; fullscreen"></iframe>
+            <p class="intro-text">Développeur passionné, je crée des solutions web modernes et dynamiques.</p>
         </div>
     </header>
 
-    <!-- Section À propos de moi avec effet de défilement -->
+    <!-- Section À propos de moi avec animation -->
     <section id="about-me">
         <h2 class="glow-text">À propos de moi</h2>
         <p class="scroll-text">
@@ -28,7 +28,32 @@
         </p>
     </section>
 
-    <!-- Section Projets avec cartes interactives -->
+    <!-- Section Compétences avec barres interactives -->
+    <section id="skills">
+        <h2 class="glow-text">Compétences</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets avec cartes animées -->
     <section id="projects">
         <h2 class="glow-text">Mes Projets</h2>
         <div class="projects-container">
