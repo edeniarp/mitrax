@@ -3,43 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation Développeur</title>
+    <title>Portfolio Développeur</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header avec vidéo en arrière-plan -->
-    <header>
+    <!-- Header avec vidéo YouTube en arrière-plan -->
+    <header id="main-header">
         <div class="profile-logo">
             <img src="https://cdn.discordapp.com/attachments/1162722175447482388/1260371586717057064/mitraxlogo.jpg?ex=66c86d42&is=66c71bc2&hm=c4670fefd7bca91058328f9af1b3d8f16e3bca3bb2c06875c77a384869b6535b" alt="Profil">
         </div>
         <div class="overlay">
-            <h1>Bienvenue sur mon Portfolio</h1>
+            <h1 class="glow-text">Bienvenue sur mon Portfolio</h1>
         </div>
-        <video autoplay loop muted class="background-video">
-            <source src="https://youtu.be/it-jSj7hA_Y?si=b5zWKvHAtmyMxBmo" type="video/mp4">
-        </video>
+        <div class="video-background">
+            <iframe src="https://www.youtube.com/embed/it-jSj7hA_Y?autoplay=1&mute=1&loop=1&playlist=it-jSj7hA_Y" frameborder="0" allow="autoplay; fullscreen"></iframe>
+        </div>
     </header>
 
-    <!-- Section À propos de moi -->
+    <!-- Section À propos de moi avec effet de défilement -->
     <section id="about-me">
-        <h2>À propos de moi</h2>
-        <p class="scroll-text">Je suis un développeur passionné avec une expérience diversifiée dans la création de solutions web dynamiques et efficaces. Je m'efforce constamment de repousser les limites de la technologie pour offrir des expériences utilisateur de premier ordre. Mon portfolio reflète ma capacité à concevoir et développer des projets innovants, allant de simples sites web à des applications complexes.</p>
+        <h2 class="glow-text">À propos de moi</h2>
+        <p class="scroll-text">
+            Je suis un développeur passionné avec une expérience diversifiée dans la création de solutions web dynamiques et efficaces. Je m'efforce constamment de repousser les limites de la technologie pour offrir des expériences utilisateur de premier ordre. Mon portfolio reflète ma capacité à concevoir et développer des projets innovants, allant de simples sites web à des applications complexes.
+        </p>
     </section>
 
-    <!-- Section Projets -->
+    <!-- Section Projets avec cartes interactives -->
     <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="project-card">
-            <h3>Projet 1</h3>
-            <p>Description du projet 1.</p>
-        </div>
-        <div class="project-card">
-            <h3>Projet 2</h3>
-            <p>Description du projet 2.</p>
-        </div>
-        <div class="project-card">
-            <h3>Projet 3</h3>
-            <p>Description du projet 3.</p>
+        <h2 class="glow-text">Mes Projets</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Projet 1</h3>
+                <p>Description du projet 1.</p>
+            </div>
+            <div class="project-card">
+                <h3>Projet 2</h3>
+                <p>Description du projet 2.</p>
+            </div>
+            <div class="project-card">
+                <h3>Projet 3</h3>
+                <p>Description du projet 3.</p>
+            </div>
         </div>
     </section>
 
