@@ -3,7 +3,6 @@ window.addEventListener('scroll', function() {
     const aboutMeSection = document.getElementById('about-me');
     const rect = aboutMeSection.getBoundingClientRect();
     
-    // Si la section À propos de moi est visible dans la fenêtre
     if (rect.top < window.innerHeight && rect.bottom >= 0) {
         scrollText.style.opacity = '1';
         scrollText.style.transform = 'translateY(0)';
@@ -11,4 +10,11 @@ window.addEventListener('scroll', function() {
         scrollText.style.opacity = '0';
         scrollText.style.transform = 'translateY(30px)';
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillLevels = document.querySelectorAll('.skill-level');
+    skillLevels.forEach((skillLevel) => {
+        skillLevel.style.width = skillLevel.style.width;
+    });
 });
