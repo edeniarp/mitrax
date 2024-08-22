@@ -37,6 +37,30 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    width: 80%;
+}
+
+#glitch-text, #secondary-subtext {
+    display: none; /* Cacher jusqu'au défilement */
+}
+
+#glitch-text {
+    font-size: 3em;
+    color: #ff0000;
+    position: relative;
+    animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #00ffea, -2px -2px #ff0080;
+    }
+    50% {
+        text-shadow: -2px 2px #ff0080, 2px -2px #00ffea;
+    }
+    100% {
+        text-shadow: 2px 2px #00ffea, -2px -2px #ff0080;
+    }
 }
 
 .glow-text {
