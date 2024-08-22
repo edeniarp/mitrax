@@ -179,3 +179,23 @@ header {
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
 }
+
+/* Ajout pour gérer l'effet glitch */
+.glitching {
+    animation: glitch-effect 150ms infinite;
+}
+
+@keyframes glitch-effect {
+    0% {
+        text-shadow: -3px 0 red, 3px 0 blue;
+        transform: skew(0.5deg);
+    }
+    50% {
+        text-shadow: 3px 0 red, -3px 0 blue;
+        transform: skew(-0.5deg);
+    }
+    100% {
+        text-shadow: -3px 0 red, 3px 0 blue;
+        transform: skew(0.5deg);
+    }
+}
