@@ -7,53 +7,48 @@ body {
     scroll-behavior: smooth;
 }
 
-header {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-.profile-logo img {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
-    border-radius: 50%;
-    z-index: 10;
-    transition: transform 0.3s ease;
-}
-
-.profile-logo img:hover {
-    transform: scale(1.1);
-}
-
-.video-background iframe {
-    position: absolute;
+.video-background {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
     pointer-events: none;
-    filter: blur(10px) brightness(50%);
+    filter: blur(5px) brightness(50%);
+}
+
+.video-background iframe {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    color: #fff;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
-    animation: fadeIn 2s ease-in-out;
 }
 
-.overlay h1 {
+.glow-text {
     font-size: 3em;
     color: #ff0000;
     text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
     animation: glow 2s infinite alternate;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    margin-top: 20px;
 }
 
 @keyframes glow {
@@ -65,13 +60,14 @@ header {
     }
 }
 
-#about-me {
+#about-me, #skills, #projects {
     padding: 50px 20px;
     background-color: #111;
     position: relative;
+    z-index: 1;
 }
 
-#about-me h2 {
+#about-me h2, #skills h2, #projects h2 {
     color: #ff0000;
     text-align: center;
     margin-bottom: 30px;
@@ -89,17 +85,38 @@ header {
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-#projects {
-    padding: 50px 20px;
-    background-color: #000;
-    position: relative;
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-#projects h2 {
-    color: #ff0000;
-    text-align: center;
-    margin-bottom: 40px;
-    text-shadow: 0 0 10px #ff0000;
+.skill {
+    width: 30%;
+    margin: 10px 0;
+}
+
+.skill-bar {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.skill-level {
+    height: 20px;
+    background-color: #ff0000;
+    width: 0;
+    animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .projects-container {
@@ -112,4 +129,29 @@ header {
 .project-card {
     background-color: #111;
     margin: 10px;
-    padding: 20px
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: #ff0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+}
+
+.project-card:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
